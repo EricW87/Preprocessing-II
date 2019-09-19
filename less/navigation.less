@@ -1,10 +1,17 @@
 // Navigation Styles here
 
-header {
+.nav-div {
+    width: 100%;
+    border-bottom: 2px dashed @navigation-border;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     nav {
+        width: 800px;
         display: flex;
         flex-direction: row;
-        margin-bottom: 10px;
 
         h1 {
             width: 60%;
@@ -25,5 +32,19 @@ header {
                 color: black;
             }
         }
+    }
+
+    @media @mobile {
+        flex-wrap: wrap;
+
+        h1 {
+            width: 100%;
+        }
+        
+        nav {
+            width: 100%;
+            justify-content: space-around;
+        }
+
     }
 }
